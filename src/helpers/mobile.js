@@ -4,11 +4,14 @@ import { useState, useEffect } from "react";
 
 
 const Mobile =()=>{
-    const [width, setWidth] = useState(window.innerWidth);
+
+    const [width, setWidth] = useState(typeof window !== `undefined` ? window.innerWidth : 1024);
     const [minWidth, setMinWidth] = useState(768);
 
 function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
+    if (typeof window !== `undefined`){ 
+        setWidth(window.innerWidth);
+  }
 }
 
 function setAsMobile() {
@@ -21,9 +24,13 @@ function resetMinWidth(){
 }
 
 useEffect(() => {
-    window.addEventListener('resize', handleWindowSizeChange);
+    if (typeof window !== `undefined`){ 
+        window.addEventListener('resize', handleWindowSizeChange);
+  }
     return () => {
-        window.removeEventListener('resize', handleWindowSizeChange);
+        if (typeof window !== `undefined`){ 
+            window.removeEventListener('resize', handleWindowSizeChange);
+      }
     }
 }, [minWidth]);
 

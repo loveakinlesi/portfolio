@@ -19,17 +19,7 @@ export const MoreLink = ({ label, children, textColor, to }) => {
   );
 };
 
-export const VtButtonGroup = ({ children, label, classes }) => {
-  return (
-    <button
-      className={`group text-xs w-full flex flex-col items-center text-indigo-600 dark:text-indigo-400 ${
-        classes ? classes : ""
-      }`}
-    >
-      {children} <span className="mt-2 break-normal">{label}</span>
-    </button>
-  );
-};
+
 
 export const ContainerButton = ({ label, children, textColor, to, bgColor }) => {
 

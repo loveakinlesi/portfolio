@@ -2,13 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import moment from "moment";
 
-export const Card = ({ image, children }) => {
-  return (
-    <div className={`rounded-lg px-6 py-8 ring-1 ring-gray-900/5 shadow-xl`}>
-      {children}
-    </div>
-  );
-};
+
 
 export const SectionCard = ({ backgroundClass, children, addClass }) => {
   return (
@@ -38,37 +32,6 @@ export const ArticleCard = ({ backgroundImage, children, addClass, backgroundCla
     >
       {children}
     </Link>
-  );
-};
-
-export const SectionCardImage = ({ src, alt, type, backgroundSize, backgroundPosition }) => {
-  console.log({ src, alt, type });
-  return (
-    <div className="w-full flex-none mb-10 xl:mb-0 xl:ml-8 xl:w-[29rem]">
-      <div className="aspect-w-[1216] aspect-h-[700] sm:aspect-w-[1376] sm:aspect-h-[664] shadow-lg rounded-lg bg-gray-100 overflow-hidden dark:bg-neutral-500/10">
-      <figure
-            className="w-full"
-            style={{
-              backgroundImage: `url(${src})`,
-              height: "auto",
-              width: "auto",
-              backgroundSize: backgroundSize || "cover",
-              backgroundPosition: backgroundPosition || "center center",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></figure>
-      </div>
-    </div>
-  );
-};
-
-export const SectionCardIcon = ({ component }) => {
-  return (
-    <div className="w-full flex-none mb-10 xl:mb-0 xl:ml-8 xl:w-[29rem]">
-      <div className="aspect-w-[1216] aspect-h-[700] sm:aspect-w-[1376] sm:aspect-h-[664]  rounded-lg overflow-hidden">
-        {component}
-      </div>
-    </div>
   );
 };
 

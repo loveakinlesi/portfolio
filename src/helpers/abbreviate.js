@@ -42,6 +42,8 @@ function abbreviate(number, maxPlaces, forcePlaces, forceLetter) {
       case '':
         rounded = number
         break
+      default:
+        break;
     }
     if(maxPlaces !== false) {
       var test = new RegExp('\\.\\d{' + (maxPlaces + 1) + ',}$')
