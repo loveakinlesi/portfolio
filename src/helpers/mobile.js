@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 
 
 const Mobile =()=>{
-    const [width, setWidth] = useState(window && window.innerWidth || 1024);
+
+    const [width, setWidth] = useState(typeof window !== `undefined` ? window.innerWidth : 1024);
     const [minWidth, setMinWidth] = useState(768);
 
 function handleWindowSizeChange() {
