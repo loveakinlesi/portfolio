@@ -4,6 +4,7 @@ import Container from "../components/container";
 import { SectionCard } from "../components/cards";
 import { HiOutlineCode } from "react-icons/hi";
 import { MdOutlineDesignServices } from "react-icons/md";
+import { Helmet } from 'react-helmet'
 
 const Hero = () => {
   const resumes = [
@@ -87,6 +88,7 @@ const Hero = () => {
 export default function Resume({ location }) {
   return (
     <Layout location={location}>
+      <Helmet title="Resume - Love Akinlesi" defer={false} />
       <Hero />
     </Layout>
   );

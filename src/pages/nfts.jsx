@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/layouts";
 import Container from "../components/container";
 import {  SectionCard } from "../components/cards";
+import { Helmet } from "react-helmet";
 
 
 
@@ -35,6 +36,7 @@ export default function NFTs({ location }) {
 
   return (
     <Layout location={location}>
+      <Helmet title="NFTs - Love Akinlesi" defer={false} />
       <ComingSoon/>
     </Layout>
   );

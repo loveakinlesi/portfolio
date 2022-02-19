@@ -8,6 +8,8 @@ import { FaPodcast, FaSpotify } from "react-icons/fa";
 import { SiGooglepodcasts } from "react-icons/si";
 import me from "../images/me/main.png";
 import {ill16} from "../assets/design";
+import { Helmet } from "react-helmet";
+
 
 const Hero = () => {
   return (
@@ -286,6 +288,7 @@ const GridView = ({ children, classes, gridSize = 3 }) => {
 export default function IndexPage({ location }) {
   return (
     <Layout location={location}>
+      <Helmet title="Love Akinlesi" defer={false} />
       <Hero />
       <Aboutme />
       <Develop />

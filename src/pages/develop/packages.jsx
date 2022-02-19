@@ -4,6 +4,7 @@ import Container from "../../components/container/index";
 import Layout from "../../components/layouts/index";
 import { randomize } from "../../assets/develop";
 import {MdOutlineOpenInNew} from 'react-icons/md'
+import { Helmet } from "react-helmet";
 
 const Hero = () => {
   return (
@@ -81,6 +82,7 @@ const Apps = () => {
 export default function Websites({ location }) {
   return (
     <Layout location={location}>
+       <Helmet title="Packages - Love Akinlesi" defer={false} />
       <Hero />
       <Apps />
     </Layout>

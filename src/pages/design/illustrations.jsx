@@ -6,6 +6,7 @@ import * as imgs from "../../assets/design";
 import { FadeInSection } from "../../components/transitions";
 import StackGrid from "react-stack-grid";
 import useWindowSize from "../../helpers/useWindowSize";
+import { Helmet } from "react-helmet";
 
 const baseUrl = process.env.DEPLOY_URL
   ? process.env.DEPLOY_URL
@@ -79,6 +80,7 @@ const Gallery = () => {
 export default function Illustrations({ location }) {
   return (
     <Layout location={location}>
+       <Helmet title="Illustrations - Love Akinlesi" defer={false} />
       <Hero />
       <Gallery />
     </Layout>

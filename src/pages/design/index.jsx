@@ -5,6 +5,7 @@ import { SectionCard } from "../../components/cards";
 import me from "../../images/me/design.png";
 import { ill1, id5 } from "../../assets/design";
 import { Link } from "gatsby";
+import { Helmet } from "react-helmet";
 
 const Hero = () => {
     const sections = [
@@ -161,6 +162,7 @@ const Tools = () => {
 export default function Design({ location }) {
   return (
     <Layout location={location}>
+       <Helmet title="Design - Love Akinlesi" defer={false} />
       <Hero />
       <Tools/>
     </Layout>

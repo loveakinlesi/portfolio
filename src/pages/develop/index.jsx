@@ -7,6 +7,7 @@ import { Link } from "gatsby";
 import { ProgressOnScroll } from "../../components/transitions/index";
 import { HiOutlineChevronRight } from "react-icons/hi";
 import Mobile from "../../helpers/mobile";
+import { Helmet } from "react-helmet";
 
 
 const Hero = () => {
@@ -383,6 +384,7 @@ const Tools = () => {
 export default function Develop({ location }) {
   return (
     <Layout location={location}>
+      <Helmet title="Develop - Love Akinlesi" defer={false} />
       <Hero />
       <Languages />
       <Frameworks />
