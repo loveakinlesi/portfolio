@@ -8,6 +8,7 @@ import { BlogCard, SectionCard, ArticleCard, TLDRCard } from "../../components/c
 import { BiChevronRight, BiSearch } from "react-icons/bi";
 import {AiOutlineEye } from "react-icons/ai";
 import abbreviate from "../../helpers/abbreviate";
+import { Helmet } from "react-helmet";
 
 
 const Article = ({title, category, backgroundImage, backgroundClass, views, link, size=1 }) => {
@@ -130,6 +131,7 @@ export default function Blog({ location }) {
 
   return (
     <Layout location={location}>
+       <Helmet title="Blog - Love Akinlesi" defer={false} />
       <ComingSoon/>
           {/* <Container padding={"py-32"}>
      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-none  gap-6">

@@ -9,6 +9,7 @@ import { SiTwitter, SiInstagram, SiGithub } from "react-icons/si";
 import me from "../images/me/podcast.png";
 import { TableList, TableListItem } from "../components/table";
 import { Link } from 'gatsby';
+import { Helmet } from "react-helmet";
 
 
 function Hero(params) {
@@ -330,6 +331,7 @@ function Hero(params) {
 export default function AboutPage({ location }) {
   return (
     <Layout location={location}>
+      <Helmet title="About - Love Akinlesi" defer={false} />
       <Hero />
       {/* <HeroDetails /> */}
     </Layout>

@@ -4,6 +4,7 @@ import Container from "../../components/container/index";
 import Layout from "../../components/layouts/index";
 import { messenger, gamesquare, ciphertag } from "../../assets/develop";
 import {MdOutlineOpenInNew} from 'react-icons/md'
+import { Helmet } from "react-helmet";
 
 const Hero = () => {
   return (
@@ -94,6 +95,7 @@ const Apps = () => {
 export default function Webapps({ location }) {
   return (
     <Layout location={location}>
+       <Helmet title="Web Applications - Love Akinlesi" defer={false} />
       <Hero />
       <Apps />
     </Layout>
