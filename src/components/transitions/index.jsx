@@ -64,7 +64,7 @@ export const FadeInSection = (props) => {
 
     return (
       <div
-        className={`transition-all ease-in-out delay-250 duration-[1500ms] ${visible}  ${props.className ? props.className : ''}`}
+        className={`transition-all ease-in-out ${props.delay ? props.delay : 'delay-250'} duration-[1500ms] ${visible}  ${props.className ? props.className : ''}`}
         id={props.id}
         ref={domRef}
         style={props.style}

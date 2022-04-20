@@ -7,6 +7,7 @@ import id6 from "./files/6.png";
 import id7 from "./files/7.png";
 import id8 from "./files/8.png";
 import id9 from "./files/9.png";
+import id10 from "./files/10.png";
 
 
 import ill1 from "./files/ill1.jpg";
@@ -43,6 +44,7 @@ export {
     id7,
     id8,
     id9,
+    id10,
 
     ill1,
     ill2,

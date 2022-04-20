@@ -1,31 +1,27 @@
 import React from "react";
-import Layout from "../../components/layouts";
-import Container from "../../components/container";
-import { SectionCard } from "../../components/cards";
-import * as imgs from "../../assets/design";
-import { FadeInSection } from "../../components/transitions";
+import Layout from "../components/layouts";
+import Container from "../components/container";
+import { SectionCard } from "../components/cards";
+import * as imgs from "../assets/design";
+import { FadeInSection } from "../components/transitions";
 import StackGrid from "react-stack-grid";
-import useWindowSize from "../../helpers/useWindowSize";
+import useWindowSize from "../helpers/useWindowSize";
 import { Helmet } from "react-helmet";
-
-const baseUrl = process.env.DEPLOY_URL
-  ? process.env.DEPLOY_URL
-  : "http://localhost:3000";
 
 const Hero = () => {
   return (
     <Container padding={"md:py-16 py-16"}>
       <SectionCard backgroundClass={"bg-transparent"} addClass={"my-20"}>
-        <div className="flex-auto">
+        <FadeInSection className="flex-auto">
           <div className=" items-center">
             <div className="col-auto text-center max-w-lg mx-auto">
-              <h3 className="mb-4 font-semibold text-gray-800 dark:text-slate-100 text-xl">
+              <h3 className="mb-4 font-semibold text-white-alt text-xl">
                 <span>Design</span>
               </h3>
-              <h1 className="mb-2 mt-3 text-6xl font-bold tracking-tight text-dark dark:text-white">
+              <h1 className="mb-2 mt-3 text-6xl font-bold tracking-tight text-white">
                 <span className="">Identity Design</span>
               </h1>
-              <p className="text-gray-700 dark:text-slate-200">
+              <p className="text-white-alt">
                 Brand identity is the face of a brand. It is the visual
                 component of a brand that represents it's emotional and even
                 philosophical concept. The message in the design needs to be
@@ -37,7 +33,7 @@ const Hero = () => {
 
 
           </div>
-        </div>
+        </FadeInSection>
       </SectionCard>
     </Container>
   );
@@ -57,15 +53,13 @@ const Gallery = () => {
         className="gap-2"
         monitorImagesLoaded={true}
         duration={3}
-        gutterHeight={0}
+        gutterHeight={10}
         gutterWidth={10}
         columnWidth={width <= 425 ? "100%" : width <= 768 ? "50%" : "33.33%"}
       >
           <FadeInSection>
-            <SectionCard>
-
-            <h3 className="mb-2 mt-3 md:text-5xl text-3xl font-bold tracking-tight text-dark dark:text-white break-words">"Design is the silent ambassador of your brand"</h3>
-
+            <SectionCard  backgroundClass={"bg-white"}>
+            <h3 className="mb-2 mt-3 text-3xl xs:text-xl font-bold tracking-tight text-dark break-words">"Design is the silent ambassador of your brand"</h3>
             </SectionCard>
           </FadeInSection>
 
