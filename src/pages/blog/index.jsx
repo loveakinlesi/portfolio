@@ -133,7 +133,7 @@ export default function Blog({ location }) {
     <Layout location={location}>
        <Helmet title="Blog - Love Akinlesi" defer={false} />
       <ComingSoon/>
-          {/* <Container padding={"py-32"}>
+          <Container padding={"py-32"}>
      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-none  gap-6">
       <div className="md:col-span-2">
         <h3 className="mb-4 font-semibold text-gray-800 dark:text-white text-2xl flex items-center space-x-2">
@@ -196,7 +196,7 @@ export default function Blog({ location }) {
         </SectionCard>
       </div>
      </div>
-     </Container> */}
+     </Container>
     </Layout>
   );
 }
