@@ -4,7 +4,7 @@ import Container from "../../components/container";
 import { SectionCard } from "../../components/cards";
 import me from "../../images/me/dev.png";
 import { Link } from "gatsby";
-import { ProgressOnScroll } from "../../components/transitions/index";
+import { FadeInSection, ProgressOnScroll } from "../../components/transitions/index";
 import { HiOutlineChevronRight } from "react-icons/hi";
 import Mobile from "../../helpers/mobile";
 import { Helmet } from "react-helmet";
@@ -46,30 +46,31 @@ const Hero = () => {
       <SectionCard backgroundClass={"bg-transparent"} addClass={"my-20"}>
         <div className="flex-auto">
           <div className="grid md:grid-cols-2 items-center">
-            <div className="col-auto">
-              <h3 className="mb-4 font-semibold text-gray-800 dark:text-white text-2xl">
-                <span> Develop </span>{" "}
-              </h3>{" "}
-              <h1 className="mb-2 mt-3 text-6xl font-bold tracking-tight text-dark dark:text-white">
-                <span className=""> Code x Coffee. </span>{" "}
-              </h1>{" "}
-              <p className="text-gray-700 dark:text-slate-200">
-                I’ m a Software Developer with a focus on modular programming.I
+            <FadeInSection className="col-auto">
+              <h3 className="mb-4 font-semibold text-white text-2xl">
+                <span> Develop </span>
+              </h3>
+              <h1 className="mb-2 mt-3 text-6xl font-bold tracking-tight text-white">
+                <span className=""> Code x Coffee. </span>
+              </h1>
+              <p className="text-white-alt">
+                I’m a Software Developer with a focus on modular programming.I
                 have about 5 years of experience with Frontend Development tools
                 including React, Angular, Vue.js and other development
-                technologies such as Python, Java, GraphQL and SQL.{" "}
-              </p>{" "}
+                technologies such as Python, Java, GraphQL and SQL.
+              </p>
               <div className="mt-8">
                 <a
                   href="https://github.com/iiitma"
-                  className="text-dark dark:text-white hover:text-primary text-sm inline-flex items-center gap-2"
+                  className="text-white-alt/50 hover:text-white text-sm inline-flex items-center gap-2 transition-colors ease-linear duration-2000"
                 >
-                  {" "}
-                  <span> Check out my Github profile </span>{" "}
-                  <HiOutlineChevronRight />{" "}
+                  
+                  <span> Check out my Github profile </span>
+                  <HiOutlineChevronRight />
                 </a>
-              </div>{" "}
-            </div>
+              </div>
+            </FadeInSection>
+            <FadeInSection delay="delay-500">
             <figure
               className="mx-auto col-auto w-[250px]"
               style={{
@@ -80,12 +81,13 @@ const Hero = () => {
                 backgroundPosition: "center center",
                 backgroundRepeat: "no-repeat",
               }}
-            ></figure>{" "}
-          </div>{" "}
-        </div>{" "}
+            ></figure>
+            </FadeInSection>
+          </div>
+        </div>
       </SectionCard>
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-none  gap-4 md:mt-32 mt-4">
-        {" "}
+      <FadeInSection delay="delay-100" className="grid md:grid-cols-3  grid-cols-none  gap-4 md:mt-32 mt-4">
+        
         {sections.map((section, index) => {
           return (
             <Link to={section.link} className="">
@@ -96,19 +98,19 @@ const Hero = () => {
               >
                 <div className="flex-auto z-30">
                   <h3 className="font-semibold text-white text-2xl tracking-none leading-none">
-                    {" "}
-                    {section.title}{" "}
-                  </h3>{" "}
+                    
+                    {section.title}
+                  </h3>
                   <p className="font-light text-white"> {section.text} </p>
-                </div>{" "}
+                </div>
                 <span className="mask bg-gradient-to-t from-gray-800 to-black  opacity-50  backdrop-blur-xl rounded-2xl">
-                  {" "}
+                  
                 </span>
-              </SectionCard>{" "}
+              </SectionCard>
             </Link>
           );
-        })}{" "}
-      </div>{" "}
+        })}
+      </FadeInSection>
     </Container>
   );
 };
@@ -185,10 +187,10 @@ const Languages = () => {
   return (
     <Container padding={"py-8"}>
       <SectionCard>
-        <div className="flex-auto justify-evenly">
-          <h3 className="mb-4 font-semibold dark:text-white text-black text-lg">
-            Programming Languages{" "}
-          </h3>{" "}
+        <FadeInSection className="flex-auto justify-evenly">
+          <h3 className="mb-4 font-semibold text-white text-lg">
+            Programming Languages
+          </h3>
           <div className="grid md:grid-cols-4 sm:grid-cols-2">
             {languages.slice(0, length()).map(({ name, level, icon }, i) => {
               return (
@@ -198,28 +200,28 @@ const Languages = () => {
                 >
                   <img src={icon} alt={name} className="w-8" />
                   <div className="flex-auto">
-                    <h6 className="text-sm font-semibold mb-2"> {name} </h6>{" "}
-                    <ProgressOnScroll level={level} />{" "}
-                  </div>{" "}
+                    <h6 className="text-sm font-semibold mb-2"> {name} </h6>
+                    <ProgressOnScroll level={level} />
+                  </div>
                 </div>
               );
-            })}{" "}
-          </div>{" "}
+            })}
+          </div>
           {isMobile && (
             <div className="flex justify-center mt-8">
               <button
-                className={"text-gray-800 dark:text-white text-sm"}
+                className={"text-white text-sm"}
                 onClick={() => {
                   setcollapsed(!collapsed);
                 }}
               >
-                {" "}
-                {collapsed ? "See All" : "Hide"}{" "}
-              </button>{" "}
+                
+                {collapsed ? "See All" : "Hide"}
+              </button>
             </div>
-          )}{" "}
-        </div>{" "}
-      </SectionCard>{" "}
+          )}
+        </FadeInSection>
+      </SectionCard>
     </Container>
   );
 };
@@ -279,27 +281,27 @@ const Frameworks = () => {
   return (
     <Container padding={"py-8"}>
       <SectionCard>
-        <div className="flex-auto justify-evenly">
-          <h3 className="mb-4 font-semibold dark:text-white text-black text-lg">
-            Frameworks & Libraries{" "}
-          </h3>{" "}
+        <FadeInSection className="flex-auto justify-evenly">
+          <h3 className="mb-4 font-semibold text-white text-lg">
+            Frameworks & Libraries
+          </h3>
           <div className="flex flex-wrap justify-evenly">
             {frameworks.map(({ name, icon }, index) => {
               return (
                 <div
-                  className="flex flex-col items-center rounded-md p-3 group hover:bg-black-alt/10 dark:hover:bg-white/10 space-y-2"
+                  className="flex flex-col items-center rounded-md p-3 group hover:bg-white/10 space-y-2"
                   key={index}
                 >
                   <img src={icon} alt={name} className="w-8" />
-                  <p className="text-dark dark:text-white text-xs whitespace-pre-wrap">
-                    {" "}
-                    {name}{" "}
-                  </p>{" "}
+                  <p className="text-white text-xs whitespace-pre-wrap">
+                    
+                    {name}
+                  </p>
                 </div>
               );
             })}
-          </div>{" "}
-        </div>{" "}
+          </div>
+        </FadeInSection>
       </SectionCard>
     </Container>
   );
@@ -326,7 +328,7 @@ const Tools = () => {
 
     {
       name: "Github",
-      icon: "https://img.icons8.com/fluency-systems-filled/50/000000/github.png",
+      icon: "https://img.icons8.com/fluency-systems-filled/50/ffffff/github.png",
     },
     {
       name: "Google Cloud Platform",
@@ -356,27 +358,27 @@ const Tools = () => {
   return (
     <Container padding={"py-8"}>
       <SectionCard>
-        <div className="flex-auto justify-evenly">
-          <h3 className="mb-4 font-semibold dark:text-white text-black text-lg">
-            Tools & Services{" "}
-          </h3>{" "}
-          <div className="flex flex-wrap justify-evenly">
+        <FadeInSection className="flex-auto justify-evenly">
+          <h3 className="mb-4 font-semibold text-white text-lg">
+            Tools & Services
+          </h3>
+          <div className="flex flex-wrap justify-evenly ">
             {tools.map(({ name, icon }, index) => {
               return (
                 <div
-                  className="flex flex-col items-center rounded-md p-3 group hover:bg-black-alt/10 dark:hover:bg-white/10 space-y-2"
+                  className="flex flex-col items-center rounded-md p-3 group hover:bg-white/10 space-y-2"
                   key={index}
                 >
                   <img src={icon} alt={name} className="w-8" />
-                  <p className="text-dark dark:text-white text-xs whitespace-pre-wrap">
-                    {" "}
-                    {name}{" "}
-                  </p>{" "}
+                  <p className="text-white-alt text-xs ">
+                    
+                    {name}
+                  </p>
                 </div>
               );
             })}
-          </div>{" "}
-        </div>{" "}
+          </div>
+        </FadeInSection>
       </SectionCard>
     </Container>
   );

@@ -7,8 +7,8 @@ import moment from "moment";
 export const SectionCard = ({ backgroundClass, children, addClass }) => {
   return (
     <div
-      className={`-mx-4 p-6 flex flex-col-reverse sm:mx-0 sm:p-10 rounded-2xl  relative  ${
-        backgroundClass ? backgroundClass : "dark:bg-black-alt bg-gray-50"
+      className={`p-6 flex flex-col-reverse sm:mx-0 sm:p-10 rounded-2xl  relative  ${
+        backgroundClass ? backgroundClass : "bg-black-alt"
       } ${!!addClass && addClass}`}
     >
       

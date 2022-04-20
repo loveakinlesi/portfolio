@@ -68,7 +68,7 @@ const Apps = () => {
               </p>
 
               <div className="flex-auto mt-5">
-                <a href={app.link} className="text-sm transition ease-in-out  flex space-x-4 items-center p-2 bg-dark text-white hover:bg-dark/75 dark:bg-white dark:text-dark hover:dark:bg-white/75 rounded w-fit"><span>Open Project</span> <MdOutlineOpenInNew/></a>
+                <a href={app.link} className="text-sm transition ease-in-out  flex space-x-4 items-center p-2 bg-dark text-white hover:bg-dark/75 dark:bg-white dark:text-dark hover:dark:bg-white-alt rounded w-fit"><span>Open Project</span> <MdOutlineOpenInNew/></a>
               </div>
               </div>
             </div>

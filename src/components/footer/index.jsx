@@ -64,8 +64,8 @@ export default function Footer() {
   // ];
 
   return (
-    <footer className="py-16 px-8 text-sm leading-6 bg-white dark:bg-black text-gray-800 dark:text-gray-400">
-      <div className="max-w-6xl mx-auto divide-y divide-slate-200 dark:divide-slate-700 px-4 sm:px-6 md:px-8 ">
+    <footer className="py-16 px-8 text-sm leading-6 bg-dark text-white-alt">
+      <div className="max-w-5xl mx-auto divide-y divide-slate-700 px-4 sm:px-6 md:px-8 ">
         {/* <div className="flex">
                             {
                                 footerItems.map((group, index) => (
@@ -96,7 +96,7 @@ export default function Footer() {
         <div className="md:flex justify-between items-center">
           <Link
             to="/"
-            className="mr-3 flex w-auto overflow-hidden dark:text-white text-2xl items-center space-x-2"
+            className="mr-3 flex w-auto overflow-hidden text-white text-2xl items-center space-x-2"
           >
           
             <figure
@@ -120,7 +120,7 @@ export default function Footer() {
         
 
           <p className="md:float-right">
-          ©{new Date().getFullYear()} <strong>|</strong> Made with love💜 and{" "}
+          ©{new Date().getFullYear()}, Made with love💜 and{" "}
             <a
               href="https://www.gatsbyjs.com/"
               target="_blank"

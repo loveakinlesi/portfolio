@@ -5,6 +5,7 @@ import { SectionCard } from "../components/cards";
 import { HiOutlineCode } from "react-icons/hi";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { Helmet } from 'react-helmet'
+import { FadeInSection } from "../components/transitions";
 
 const Hero = () => {
   const resumes = [
@@ -30,26 +31,26 @@ const Hero = () => {
   return (
     <Container padding={"md:py-32 py-16"}>
       <div className="py-16 grid sm:grid-cols-2">
-        <SectionCard backgroundClass={"bg-transparent"}>
-          <div className="flex-auto z-10 justify-evenly flex flex-col">
-            <h3 className="mb-4 font-semibold text-gray-800 dark:text-white text-lg flex items-center space-x-2">
+        <SectionCard backgroundClass={"bg-transparent"} addClass={`p-0`}>
+          <FadeInSection className="flex-auto z-10 justify-evenly flex flex-col">
+            <h3 className="mb-4 font-semibold text-white-alt text-lg flex items-center space-x-2">
               <span>Resume</span>
             </h3>
-            <h1 className="mb-2 mt-6 text-4xl font-bold tracking-tight text-gray-900 dark:text-slate-300 ">
+            <h1 className="mb-2 mt-6 text-4xl font-bold tracking-tight text-white ">
               <span className="">
                 Download My Resume Templates
               </span>
             </h1>
 
-            <h6 className=" text-slate-500 dark:text-gray-400">
+            <h6 className=" text-white/50">
               Kindly remeber that these copies are for personal use only and
               should only be taken as a guideline to creating yours.
             </h6>
-          </div>
+          </FadeInSection>
         </SectionCard>
 
         <SectionCard backgroundClass={"bg-transparent"}>
-          <div className="flex-auto space-y-6 justify-evenly sm:flex flex-col">
+          <FadeInSection delay="delay-500" className="flex-auto space-y-6 justify-evenly sm:flex flex-col">
             {
               resumes.map((resume, index)=> {
                 return (
@@ -57,20 +58,20 @@ const Hero = () => {
                   key={index}
                   href={resume.link}
                   download={`Love Akinlesi's ${resume.title} v${resume.version}`}
-                  className={`group block max-w-xs mx-auto rounded-lg p-6 shadow-lg space-y-3 bg-white dark:bg-black-alt border border-primary/20  bg-whitering-1 ring-slate-900/5 hover:bg-primary  cursor-pointer`}
+                  className={`group block max-w-xs mx-auto rounded-lg p-6 shadow-lg space-y-3 bg-dark border border-white/20  bg-whitering-1 ring-white/5 hover:bg-primary  cursor-pointer`}
                 >
                   <div className="flex items-center space-x-3">
                     <resume.component
-                      className={`h-6 w-6 text-primary  group-hover:text-white`}
+                      className={`h-6 w-6 text-primary  group-hover:text-dark`}
                     />
-                    <h3 className="text-slate-900 dark:text-slate-300 group-hover:text-white text-lg font-semibold">
+                    <h3 className="text-white-alt group-hover:text-dark text-lg font-semibold">
                       {resume.title}{" "}
-                      <span className="text-xs text-slate-700 dark:text-primary group-hover:text-white font-normal">
+                      <span className="text-xs text-primary group-hover:text-dark font-normal">
                         v{resume.version}
                       </span>
                     </h3>
                   </div>
-                  <p className="text-slate-500 dark:text-slate-400 group-hover:text-white text-sm">
+                  <p className="text-slate-400 group-hover:text-dark text-sm">
                     {resume.description}
                   </p>
                 </a>
@@ -78,7 +79,7 @@ const Hero = () => {
               })
             }
 
-          </div>
+          </FadeInSection>
         </SectionCard>
       </div>
     </Container>
