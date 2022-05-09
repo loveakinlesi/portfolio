@@ -4,6 +4,8 @@ import Container from "../../components/container";
 import { SectionCard} from "../../components/cards";
 import { Helmet } from "react-helmet";
 import {FadeInSection} from "../../components/transitions";
+import { SubscribeComponent } from "../../components/substack/subscribe";
+import { PublishedComponent } from "../../components/substack/published";
 
 
 const ComingSoon = () => {
@@ -25,6 +27,7 @@ const ComingSoon = () => {
                 Stay tuned for articles with topics on
                 coding, tech products, design, and others
               </p>
+              <SubscribeComponent/>
             </div>
           </div>
         </FadeInSection>
@@ -40,6 +43,7 @@ export default function Blog({ location }) {
       <Helmet title="Blog - Love Akinlesi" defer={false} />
       <div style={{height: `calc(100vh - 262px)`}}>
       <ComingSoon />
+      <PublishedComponent/>
       </div>
     </Layout>
   );
