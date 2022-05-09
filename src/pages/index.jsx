@@ -36,7 +36,7 @@ const Hero = () => {
               I’m Love — a designer and developer based in Lagos, Nigeria. I
               started as an engineering product designer with a passion for
               problem solving. Now, I do a mix of visual design, web development and content creation. When I'm not designing or coding, I
-              love to share whatever I know and brainstom ideas. I also like to help people on their journey into tech.
+              love to share whatever I know and brainstorm ideas. I also like to help people on their journey into tech.
             </p>
           </div>
         </FadeInSection>
