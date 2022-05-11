@@ -21,9 +21,14 @@ const Hero = () => {
               <h1 className="mb-2 mt-3 text-5xl font-bold tracking-tight text-white">
                 <span className="">Illustrations</span>
               </h1>
-                <p className="text-white-alt/75">
-                An illustration is a visualization or a depiction made by an artist, such as a drawing, sketch, painting, photograph, or other kind of image of things seen, remembered or imagined, using a graphical representation. Most of my illustrative designs are digital sketches of actual people and are drawn in Adobe Illustrator.
-                </p>
+              <p className="text-white-alt/75">
+                An illustration is a visualization or a depiction made by an
+                artist, such as a drawing, sketch, painting, photograph, or
+                other kind of image of things seen, remembered or imagined,
+                using a graphical representation. Most of my illustrative
+                designs are digital sketches of actual people and are drawn in
+                Adobe Illustrator.
+              </p>
             </FadeInSection>
           </div>
         </div>
@@ -50,13 +55,13 @@ const Gallery = () => {
         gutterWidth={10}
         columnWidth={width <= 425 ? "100%" : width <= 768 ? "50%" : "33.33%"}
       >
-             <FadeInSection>
-            <SectionCard backgroundClass={"bg-white"}>
-
-            <h3 className="mb-2 mt-3 text-3xl xs:text-xl font-bold tracking-tight text-dark break-words">"Design is creativity having fun."</h3>
-
-            </SectionCard>
-          </FadeInSection>
+        <FadeInSection>
+          <SectionCard backgroundClass={"bg-white"}>
+            <h3 className="mb-2 mt-3 text-3xl xs:text-xl font-bold tracking-tight text-dark break-words">
+              "Design is creativity having fun."
+            </h3>
+          </SectionCard>
+        </FadeInSection>
         {images.map((image, i) => {
           return (
             <FadeInSection key={image.id}>
@@ -76,7 +81,14 @@ const Gallery = () => {
 export default function Illustrations({ location }) {
   return (
     <Layout location={location}>
-       <Helmet title="Illustrations - Love Akinlesi" defer={false} />
+      <Helmet>
+        <title>Illustrations - Love Akinlesi</title>
+        <meta name="theme-color" content="#131414" />
+        <meta
+          name="description"
+          content=" An illustration is a visualization or a depiction made by an artist, such as a drawing, sketch, painting, photograph, or other kind of image of things seen, remembered or imagined, using a graphical representation. Most of my illustrative designs are digital sketches of actual people and are drawn in Adobe Illustrator."
+        />
+      </Helmet>
       <Hero />
       <Gallery />
     </Layout>

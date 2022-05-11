@@ -27,11 +27,7 @@ const Hero = () => {
                 philosophical concept. The message in the design needs to be
                 clear and consistent.
               </p>
-
-             
             </div>
-
-
           </div>
         </FadeInSection>
       </SectionCard>
@@ -57,11 +53,13 @@ const Gallery = () => {
         gutterWidth={10}
         columnWidth={width <= 425 ? "100%" : width <= 768 ? "50%" : "33.33%"}
       >
-          <FadeInSection>
-            <SectionCard  backgroundClass={"bg-white"}>
-            <h3 className="mb-2 mt-3 text-3xl xs:text-xl font-bold tracking-tight text-dark break-words">"Design is the silent ambassador of your brand"</h3>
-            </SectionCard>
-          </FadeInSection>
+        <FadeInSection>
+          <SectionCard backgroundClass={"bg-white"}>
+            <h3 className="mb-2 mt-3 text-3xl xs:text-xl font-bold tracking-tight text-dark break-words">
+              "Design is the silent ambassador of your brand"
+            </h3>
+          </SectionCard>
+        </FadeInSection>
 
         {images.map((image, i) => {
           return (
@@ -82,7 +80,17 @@ const Gallery = () => {
 export default function IdentityDesign({ location }) {
   return (
     <Layout location={location}>
-       <Helmet title="Identity Design - Love Akinlesi" defer={false} />
+      <Helmet>
+        <title>Identity Design - Love Akinlesi</title>
+        <meta name="theme-color" content="#131414" />
+        <meta
+          name="description"
+          content="Brand identity is the face of a brand. It is the visual
+          component of a brand that represents it's emotional and even
+          philosophical concept. The message in the design needs to be
+          clear and consistent."
+        />
+      </Helmet>
       <Hero />
       <Gallery />
     </Layout>

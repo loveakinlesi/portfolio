@@ -99,7 +99,11 @@ const Aboutme = () => {
 export default function IndexPage({ location }) {
   return (
     <Layout location={location}>
-      <Helmet title="Love Akinlesi" defer={false} />
+  <Helmet>
+      <title>Love Akinlesi</title>
+      <meta name="theme-color" content="#131414" />
+      <meta name="description" content="I’m Love — a designer and developer based in Lagos, Nigeria." />
+        </Helmet> 
       <Hero />
       <Aboutme />
     </Layout>

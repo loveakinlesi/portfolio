@@ -4,11 +4,13 @@ import Container from "../../components/container";
 import { SectionCard } from "../../components/cards";
 import me from "../../images/me/dev.png";
 import { Link } from "gatsby";
-import { FadeInSection, ProgressOnScroll } from "../../components/transitions/index";
+import {
+  FadeInSection,
+  ProgressOnScroll,
+} from "../../components/transitions/index";
 import { HiOutlineChevronRight } from "react-icons/hi";
 import Mobile from "../../helpers/mobile";
 import { Helmet } from "react-helmet";
-
 
 const Hero = () => {
   const sections = [
@@ -64,30 +66,31 @@ const Hero = () => {
                   href="https://github.com/iiitma"
                   className="text-white-alt/50 hover:text-white text-sm inline-flex items-center gap-2 transition-colors ease-linear duration-2000"
                 >
-                  
                   <span> Check out my Github profile </span>
                   <HiOutlineChevronRight />
                 </a>
               </div>
             </FadeInSection>
             <FadeInSection delay="delay-500">
-            <figure
-              className="mx-auto col-auto w-[250px]"
-              style={{
-                backgroundImage: `url(${me})`,
-                height: "250px",
-                width: "250px",
-                backgroundSize: "contain",
-                backgroundPosition: "center center",
-                backgroundRepeat: "no-repeat",
-              }}
-            ></figure>
+              <figure
+                className="mx-auto col-auto w-[250px]"
+                style={{
+                  backgroundImage: `url(${me})`,
+                  height: "250px",
+                  width: "250px",
+                  backgroundSize: "contain",
+                  backgroundPosition: "center center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              ></figure>
             </FadeInSection>
           </div>
         </div>
       </SectionCard>
-      <FadeInSection delay="delay-100" className="grid md:grid-cols-3  grid-cols-none  gap-4 md:mt-32 mt-4">
-        
+      <FadeInSection
+        delay="delay-100"
+        className="grid md:grid-cols-3  grid-cols-none  gap-4 md:mt-32 mt-4"
+      >
         {sections.map((section, index) => {
           return (
             <Link to={section.link} className="">
@@ -98,14 +101,11 @@ const Hero = () => {
               >
                 <div className="flex-auto z-30">
                   <h3 className="font-semibold text-white text-2xl tracking-none leading-none">
-                    
                     {section.title}
                   </h3>
                   <p className="font-light text-white"> {section.text} </p>
                 </div>
-                <span className="mask bg-gradient-to-t from-gray-800 to-black  opacity-50  backdrop-blur-xl rounded-2xl">
-                  
-                </span>
+                <span className="mask bg-gradient-to-t from-gray-800 to-black  opacity-50  backdrop-blur-xl rounded-2xl"></span>
               </SectionCard>
             </Link>
           );
@@ -115,8 +115,7 @@ const Hero = () => {
   );
 };
 
-
-// 
+//
 
 const Languages = () => {
   const { isMobile } = Mobile();
@@ -215,7 +214,6 @@ const Languages = () => {
                   setcollapsed(!collapsed);
                 }}
               >
-                
                 {collapsed ? "See All" : "Hide"}
               </button>
             </div>
@@ -294,7 +292,6 @@ const Frameworks = () => {
                 >
                   <img src={icon} alt={name} className="w-8" />
                   <p className="text-white text-xs whitespace-pre-wrap">
-                    
                     {name}
                   </p>
                 </div>
@@ -370,10 +367,7 @@ const Tools = () => {
                   key={index}
                 >
                   <img src={icon} alt={name} className="w-8" />
-                  <p className="text-white-alt text-xs ">
-                    
-                    {name}
-                  </p>
+                  <p className="text-white-alt text-xs ">{name}</p>
                 </div>
               );
             })}
@@ -386,7 +380,17 @@ const Tools = () => {
 export default function Develop({ location }) {
   return (
     <Layout location={location}>
-      <Helmet title="Develop - Love Akinlesi" defer={false} />
+      <Helmet>
+        <title>Develop - Love Akinlesi</title>
+        <meta name="theme-color" content="#131414" />
+        <meta
+          name="description"
+          content="I’m a Software Developer with a focus on modular programming.I
+          have about 5 years of experience with Frontend Development tools
+          including React, Angular, Vue.js and other development
+          technologies such as Python, Java, GraphQL and SQL."
+        />
+      </Helmet>
       <Hero />
       <Languages />
       <Frameworks />

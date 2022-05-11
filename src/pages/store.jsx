@@ -33,7 +33,10 @@ export default function Store({ location }) {
 
   return (
     <Layout location={location}>
-      <Helmet title="Store - Love Akinlesi" defer={false} />
+    <Helmet>
+      <title>Store - Love Akinlesi</title>
+      <meta name="theme-color" content="#131414" />
+        </Helmet> 
       <div style={{height: `calc(100vh - 262px)`}}>
       <ComingSoon />
       </div>
