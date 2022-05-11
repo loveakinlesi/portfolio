@@ -82,7 +82,17 @@ const Apps = () => {
 export default function Websites({ location }) {
   return (
     <Layout location={location}>
-       <Helmet title="Websites - Love Akinlesi" defer={false} />
+       <Helmet>
+        <title>Websites - Love Akinlesi</title>
+        <meta name="theme-color" content="#131414" />
+        <meta
+          name="description"
+          content="I’m a Software Developer with a focus on modular programming.I
+          have about 5 years of experience with Frontend Development tools
+          including React, Angular, Vue.js and other development
+          technologies such as Python, Java, GraphQL and SQL."
+        />
+      </Helmet>
       <Hero />
       <Apps />
     </Layout>

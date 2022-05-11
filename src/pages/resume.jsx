@@ -89,7 +89,12 @@ const Hero = () => {
 export default function Resume({ location }) {
   return (
     <Layout location={location}>
-      <Helmet title="Resume - Love Akinlesi" defer={false} />
+    <Helmet>
+      <title>Resume - Love Akinlesi</title>
+      <meta name="theme-color" content="#131414" />
+      <meta name="description" content="Download My Resume Templates" />
+
+        </Helmet> 
       <Hero />
     </Layout>
   );

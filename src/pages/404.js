@@ -36,7 +36,10 @@ export default function NotFound({ location }) {
 
   return (
     <Layout location={location}>
-      <Helmet title="Page Not Found - Love Akinlesi" defer={false} />
+      <Helmet>
+      <title>Page Not Found - Love Akinlesi</title>
+      <meta name="theme-color" content="#131414" />
+        </Helmet> 
       <Hero/>
     </Layout>
   );
