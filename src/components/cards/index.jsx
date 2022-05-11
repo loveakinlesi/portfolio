@@ -26,7 +26,7 @@ export const ArticleCard = ({ backgroundImage, children, addClass, backgroundCla
   return (
     <Link to={link}
       className={`-mx-4 p-6 flex flex-col-reverse sm:mx-0 sm:p-10 rounded-2xl xl:flex-row relative  shadow-sm bg-cover bg-center bg-no-repeat hover:bg-scale-110 ${
-        backgroundClass ? backgroundClass : "dark:bg-black-alt bg-gray-50"
+        backgroundClass ? backgroundClass : "bg-black-alt"
       } ${!!addClass && addClass}`}
       style={style}
     >
@@ -83,3 +83,18 @@ export const TLDRCard = ({ title, date, image, link }) => {
     </Link>
   );
 };
+
+
+export const AuthorCard = ({author}) => {
+  return (
+    <div className="pb-3 max-w-sm mx-auto bg-dark rounded-xl flex items-center space-x-4">
+      <div className="shrink-0">
+        <img className="h-16 w-16 rounded-full" src={author.photo_url} alt={author.user_profile_name}/>
+      </div>
+      <div>
+        <div className="text-xl font-medium text-white">{author.name}</div>
+        <p className="text-white-alt text-sm">{author.bio}</p>
+      </div>
+    </div>
+  )
+}
