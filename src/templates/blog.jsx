@@ -37,7 +37,7 @@ const BlogHeader = () => {
 
 const LatestSection = ({ latestPosts }) => {
   return (
-    <FadeInSection delay="delay-[1750]" className="md:col-span-2">
+    <div  className="md:col-span-2 mb-32">
 
         <h3 className="mb-4 font-semibold text-white text-2xl flex items-center space-x-2 ">
           <span>Latest Notes</span>
@@ -58,17 +58,13 @@ const LatestSection = ({ latestPosts }) => {
           </MoreLink>
         </div>
       )}
-    </FadeInSection>
+    </div>
   );
 };
 
 const AuthorSection = ({ authors }) => {
   return (
     <div className="sticky top-16">
-        {/* <h3 className="mb-0 font-semibold text-white text-sm flex items-center space-x-2 ">
-          <span>Author{authors.length > 1 && 's'}</span>
-        </h3> */}
-
       {authors.map((author, index) => {
         return <AuthorCard key={index} author={author} />;
       })}

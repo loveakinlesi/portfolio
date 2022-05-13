@@ -77,6 +77,7 @@ export default function Navbar({ location }) {
                       <li key={item.label}>
                         <a
                           href={item.link}
+                          target="_blank"
                           className="py-2 rounded-md text-white"
                         >
                           <item.icon size={20} />
@@ -126,11 +127,11 @@ export default function Navbar({ location }) {
                           <div className="p-4 bg-gray-50">
                             <div className="flow-root px-2 py-2 transition duration-150 ease-in-out rounded-md hover:bg-white-alt/10 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50">
                               <span className="flex items-center">
-                                <span className="text-sm font-medium text-gray-900">
+                                <span className="text-sm font-semibold text-gray-900">
                                   Socials
                                 </span>
                               </span>
-                              <span className="block text-sm text-gray-500">
+                              <span className="block text-xs text-gray-500">
                                 Connect with me
                               </span>
                             </div>

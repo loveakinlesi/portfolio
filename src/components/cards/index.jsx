@@ -25,7 +25,7 @@ export const ArticleCard = ({ backgroundImage, children, addClass, backgroundCla
   } : null
   return (
     <Link to={link}
-      className={`-mx-4 p-6 flex flex-col-reverse sm:mx-0 sm:p-10 rounded-2xl xl:flex-row relative  shadow-sm bg-cover bg-center bg-no-repeat hover:bg-scale-110 ${
+      className={`-mx-4 p-6 flex flex-col-reverse sm:mx-0 sm:p-10 rounded-2xl xl:flex-row relative  shadow-sm bg-cover bg-center bg-no-repeat  ease-in-out transition delay-150 ${
         backgroundClass ? backgroundClass : "bg-black-alt"
       } ${!!addClass && addClass}`}
       style={style}

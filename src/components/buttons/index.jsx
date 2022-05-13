@@ -12,9 +12,9 @@ export const MoreLink = ({ label, children, textColor, to }) => {
   return (
     <Link
       to={to}
-      className={`text-sm ${textClasss} flex space-x-1 align-middle items-center my-2`}
+      className={`text-sm ${textColor ? textColor : 'text-white'} flex space-x-1 align-middle items-center my-2 group`}
     >
-      <span>{label || children}</span> <BiChevronRight size={18} />
+      <span>{label || children}</span> <BiChevronRight className="group-hover:translate-x-4 transition delay-200 ease-linear" size={18} />
     </Link>
   );
 };

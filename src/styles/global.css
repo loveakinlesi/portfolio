@@ -70,7 +70,20 @@
     .typography p, .typography.editor p {
         line-height: 1.6em;
         margin: 0 0 2em;
-        font-weight: 300
+        font-weight: 300;
+        color: rgb(226 226 226 / 0.75);
+        text-align: justify;
+    }
+
+    .typography p a, .typography.editor p a {
+        line-height: 1.6em;
+        margin-left: 10px;
+        font-weight: 500;
+        color: rgb(226 226 226 / 0.75);
+        font-size: small;
+    }
+   .typography p a:hover, .typography.editor p a:hover {
+        color: rgb(226 226 226);
     }
 
     .typography h4, .typography.editor h4 {

@@ -2,9 +2,14 @@ const fetch = require('node-fetch');
 const axios = require('axios');
 const moment = require('moment');
 
-const API = 'https://loveakinlesi.substack.com/api/v1'
+require('dotenv').config({
+  path: `.env`,
+});
 
-const get = (endpoint) => axios.get(`${API}/${endpoint}`);
+
+const get = (endpoint) => axios.get(`${process.env.API}/${endpoint}`);
+
+const getImagesFromFolder = (data) => axios.post(`https://${process.env.CLOUDINARY_API_KEY}:${process.env.CLOUDINARY_API_SECRET}@api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/search`, data)
 
 const getLatestPosts = async () => {
     const { data: posts } = await get(`/posts?limit=5`);
@@ -26,12 +31,34 @@ const getAuthors = async () => {
     return authors
 }
 
+const getIllustrations = async () => {
+  const { data: illustrations } = await getImagesFromFolder({
+    expression: "folder:portfolio/illustrations/*",
+    sort_by: [{"public_id": "desc"}]
+  });
+  return illustrations
+}
+
+const getIdentityDesigns = async () => {
+  const { data: identity } = await getImagesFromFolder({
+    expression: "folder:portfolio/identity-design/*",
+    sort_by: [{"public_id": "desc"}]
+  });
+  return identity
+}
+
+
+
+
+
 
 exports.createPages = async ({ actions: { createPage } }) => {
     const allArchives = await getAllArchives();
     const latestPosts = await getLatestPosts();
     const authors = await getAuthors();
     const allPosts = await getAllPosts();
+    const illustrations = await getIllustrations();
+    const identityDesigns = await getIdentityDesigns();
   
     // Create a page that lists all archive posts.
     createPage({
@@ -55,4 +82,17 @@ exports.createPages = async ({ actions: { createPage } }) => {
         context: { note }
       });
     })
-  };
+
+    // Create a page that lists the images for illustration.
+    createPage({
+      path: `/illustrations`,
+      component: require.resolve('./src/templates/design.jsx'),
+      context: { images: illustrations.resources, name: 'illustration' }
+  });
+
+  createPage({
+    path: `/identity-design`,
+    component: require.resolve('./src/templates/design.jsx'),
+    context: { images: identityDesigns.resources, name: 'identity' }
+});
+};

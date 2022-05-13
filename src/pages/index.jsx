@@ -52,6 +52,7 @@ const Aboutme = () => {
     {title: "Identity Design", target: null, link: "/identity-design", description: "A collection of some of logo designs for various brands over the years."},
     {title: "The Melanin Faces NFT Collection", target: "_blank", link: "https://opensea.io/collection/the-melanin-faces", description: "A collection of 10,000 dark skinned female faces expressing beauty, individuality and diversity in the black community."},
     {title: "Code x Coffee.", target: null, link: "/develop", description: "30% code 70% coffee😭! It's a weird lifestyle but I love every bit of it. This is my space for everything coding."},
+    {title: "Love's Notes", target: null, link: "/blog", description: "Coding. Design. Tech Trends. And every other thing along those lines."},
   ]
 
 
@@ -75,10 +76,10 @@ const Aboutme = () => {
 
     {creating.map((item, index)=> {
       return (
-        <FadeInSection delay="delay-400" className="my-4" key={index}>
-        <Link target={item.target} to={item.link} className="text-lg text-white flex align-middle space-x-4 mb-2">
+        <FadeInSection delay="delay-400" className="my-4 group" key={index}>
+        <Link target={item.target} to={item.link} className="text-lg text-white/75 group-hover:text-white flex align-middle space-x-4 mb-2 transition ease-in-out delay-150">
           <span className="leading-none">{item.title}</span>
-          <BsArrowRight/>
+          <BsArrowRight className="group-hover:translate-x-full transition ease-in-out delay-150"/>
         </Link>
         <div className="prose text-sm text-white-alt/50">
           <p>{item.description}</p>
