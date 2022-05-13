@@ -27,4 +27,9 @@ function randomBgImage(){
     return array(images)[0]
 }
 
-export {getArticleLink, getArticleDate, randomBgImage}
+function timeToRead(wordCount){
+    const time = (wordCount/200).toFixed()
+    return `${time} ${time === 1 ? 'min' : 'mins'} read`
+}
+
+export {getArticleLink, getArticleDate, randomBgImage, timeToRead}

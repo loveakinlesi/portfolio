@@ -37,7 +37,7 @@ const BlogHeader = () => {
 
 const LatestSection = ({ latestPosts }) => {
   return (
-    <FadeInSection delay="delay-[1750]" className="md:col-span-2">
+    <div  className="md:col-span-2">
 
         <h3 className="mb-4 font-semibold text-white text-2xl flex items-center space-x-2 ">
           <span>Latest Notes</span>
@@ -58,7 +58,7 @@ const LatestSection = ({ latestPosts }) => {
           </MoreLink>
         </div>
       )}
-    </FadeInSection>
+    </div>
   );
 };
 
