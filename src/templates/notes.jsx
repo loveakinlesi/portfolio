@@ -4,6 +4,24 @@ import { Helmet } from "react-helmet";
 import Layout from "../components/layouts";
 import moment from "moment";
 import { timeToRead } from "../helpers/article-helpers";
+import { SubscribeComponent } from "../components/substack/subscribe";
+import { BsArrowLeft } from "react-icons/bs";
+import { Link } from "gatsby";
+
+const SubscribeSection = ({}) => {
+  return (
+    <div className="px-3">
+      <div className="align-center mt-24">
+        <h3 className="mb-4 font-semibold text-white text-md flex items-center space-x-2">
+          <span className="mx-auto text-center">
+            Make sure you receive the latest updates from Love's Notes.
+          </span>
+        </h3>
+        <SubscribeComponent />
+      </div>
+    </div>
+  );
+};
 
 export default function Notes({ location, pageContext: { note } }) {
   console.log(location);
@@ -33,6 +51,10 @@ export default function Notes({ location, pageContext: { note } }) {
       <div style={{ minHeight: `calc(100vh - 262px)` }}>
         <Container padding={"py-32"}>
           <div className="flex flex-col">
+          <Link to="/blog" className="text-sm text-white-alt/50 hover:text-white/75 flex align-middle space-x-4 mb-2">
+          <BsArrowLeft/>
+          <span className="leading-none">Back to Blog home</span>
+        </Link>
             <div className="mb-8">
               <h2 className="mb-1 font-semibold text-white text-4xl">
                 {note.title}
@@ -40,11 +62,11 @@ export default function Notes({ location, pageContext: { note } }) {
               <p className="text-white-alt text-lg mb-4">
                 {note.subtitle || note.description}
               </p>
-              <div className="flex items-center">
+              <div className="md:flex items-center">
                 <div className="flex items-center">
                   {note.publishedBylines.map((author, index) => {
                     return (
-                      <div className="flex items-center">
+                      <div key={index} className="flex items-center">
                         <div className="shrink-0">
                           <img
                             className="h-6 w-6 rounded-full mr-2"
@@ -57,21 +79,25 @@ export default function Notes({ location, pageContext: { note } }) {
                     );
                   })}
                 </div>
-                <span className="mx-2">|</span>
-                <p className="text-white-alt text-sm">
-                  {moment(note.post_date).format("MMMM DD, YYYY")}
-                </p>
-                <span className="mx-2"></span>
-                <p className="text-white-alt text-sm ml-auto">{timeToRead(note.wordcount)}</p>
+
+                <div className="flex flex-auto justify-between my-3 md:ml-8">
+                  <p className="text-white-alt text-sm">
+                    {moment(note.post_date).format("MMMM DD, YYYY")}
+                  </p>
+                  <p className="text-white-alt text-sm ml-auto font-semibold">
+                    {timeToRead(note.wordcount)}
+                  </p>
+                </div>
               </div>
-             
-              <div></div>
+
+              <div className="my-2"></div>
             </div>
           </div>
           <div
             className="markup w-full text-white-alt typography"
             dangerouslySetInnerHTML={{ __html: note.body_html }}
           />
+          <SubscribeSection />
         </Container>
       </div>
     </Layout>

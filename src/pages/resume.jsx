@@ -13,10 +13,10 @@ const Hero = () => {
       title: "Dev Resume",
       component: HiOutlineCode,
       color: "develop",
-      link: "https://drive.google.com/file/d/1pakcHrwM03CSYv25vxD5joJsTdQBGpN9/view?usp=sharing",
+      link: "https://drive.google.com/uc?export=download&id=1pakcHrwM03CSYv25vxD5joJsTdQBGpN9",
       description:
         "Applicably for software engineering roles; especially frontend-related roles.",
-      version: "2021.08",
+      version: "2022.05",
     },
     {
       title: "Design Resume",
@@ -57,6 +57,7 @@ const Hero = () => {
                   <a
                   key={index}
                   href={resume.link}
+                  target="_blank"
                   download={`Love Akinlesi's ${resume.title} v${resume.version}`}
                   className={`group block max-w-xs mx-auto rounded-lg p-6 shadow-lg space-y-3 bg-dark border border-white/20  bg-whitering-1 ring-white/5 hover:bg-primary  cursor-pointer`}
                 >
