@@ -57,7 +57,6 @@ const Hero = () => {
                   <a
                   key={index}
                   href={resume.link}
-                  target="_blank"
                   download={`Love Akinlesi's ${resume.title} v${resume.version}`}
                   className={`group block max-w-xs mx-auto rounded-lg p-6 shadow-lg space-y-3 bg-dark border border-white/20  bg-whitering-1 ring-white/5 hover:bg-primary  cursor-pointer`}
                 >

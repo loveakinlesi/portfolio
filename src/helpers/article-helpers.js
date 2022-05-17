@@ -32,4 +32,4 @@ function timeToRead(wordCount){
     return `${time}${time === 1 ? 'min' : 'mins'} read`
 }
 
-export {getArticleLink, getArticleDate, randomBgImage, timeToRead}
+export {getArticleLink, getArticleDate, randomBgImage, timeToRead, formattedNumber}

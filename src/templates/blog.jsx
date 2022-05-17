@@ -72,24 +72,24 @@ const AuthorSection = ({ authors }) => {
   );
 };
 
-const SearchSection = ({}) => {
-  return (
-    <label className="relative block">
-        <span className="sr-only">Search</span>
-        <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-          <svg className="h-5 w-5 fill-white-alt" viewBox="0 0 20 20"></svg>
-        </span>
-        <input
-          className="placeholder:italic placeholder:text-white-alt block bg-dark w-full border border-white-alt/50 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-white/50 focus:ring-white/50 focus:ring-1 sm:text-sm"
-          placeholder="Search for Love's notes..."
-          type="text"
-          name="search"
-        />
-      </label>
-  )
-}
+// const SearchSection = () => {
+//   return (
+//     <label className="relative block">
+//         <span className="sr-only">Search</span>
+//         <span className="absolute inset-y-0 left-0 flex items-center pl-2">
+//           <svg className="h-5 w-5 fill-white-alt" viewBox="0 0 20 20"></svg>
+//         </span>
+//         <input
+//           className="placeholder:italic placeholder:text-white-alt block bg-dark w-full border border-white-alt/50 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-white/50 focus:ring-white/50 focus:ring-1 sm:text-sm"
+//           placeholder="Search for Love's notes..."
+//           type="text"
+//           name="search"
+//         />
+//       </label>
+//   )
+// }
 
-const SubscribeSection = ({}) => {
+const SubscribeSection = () => {
   return (
     <div className="px-3">
     <div className="align-center my-8">

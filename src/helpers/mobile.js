@@ -16,7 +16,6 @@ function handleWindowSizeChange() {
 
 function setAsMobile() {
     setMinWidth(width);
-    console.log(width, minWidth, isMobile);
 }
 
 function resetMinWidth(){
