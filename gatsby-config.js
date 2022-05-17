@@ -4,7 +4,6 @@ module.exports = {
     siteUrl: "https://www.loveakinlesi.com",
     description: "I’m Love — a designer and developer based in Lagos, Nigeria."
   },
-  trailingSlash: "never",
   plugins: [
     {
       resolve: "gatsby-plugin-google-tagmanager",
@@ -15,11 +14,7 @@ module.exports = {
     },
     'gatsby-plugin-postcss',
     "gatsby-plugin-react-helmet",
-    { resolve: "gatsby-plugin-sitemap",
-    options: {
-      excludes: ['/404', '/404.html']
-    }
-  },
+    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
