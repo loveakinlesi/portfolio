@@ -1,19 +1,20 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
     title: "Love Akinlesi",
+    siteUrl: "https://www.loveakinlesi.com",
+    description: "I’m Love — a designer and developer based in Lagos, Nigeria."
   },
   plugins: [
-    // {
-    //   resolve: "gatsby-plugin-google-analytics",
-    //   options: {
-    //     trackingId: "null",
-    //   },
-    // },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-T3WGQHL",
+        includeInDevelopment: false,
+      },
+    },
     'gatsby-plugin-postcss',
-    // "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-    // "gatsby-plugin-sitemap",
+    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -39,5 +40,6 @@ module.exports = {
       },
       __key: "pages",
     },
+    
   ],
 };

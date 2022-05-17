@@ -80,7 +80,6 @@ const Gallery = ({images, name}) => {
 };
 
 export default function DesignTemplate({ location, pageContext: { images, name }, }) {
-    console.log(images, name)
   return (
     <Layout location={location}>
       <Helmet>

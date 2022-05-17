@@ -2,7 +2,6 @@ import React from "react";
 import { SectionCard } from "../../components/cards";
 import Container from "../../components/container/index";
 import Layout from "../../components/layouts/index";
-import { randomize } from "../../assets/develop";
 import {MdOutlineOpenInNew} from 'react-icons/md'
 import { Helmet } from "react-helmet";
 
@@ -34,7 +33,7 @@ const Apps = () => {
       description: "js-randomize is a simple javascript utility to generate random values in your code.",
       technologies: ["Typescript", "npm"],
       link: "https://www.npmjs.com/package/js-randomize",
-      image: randomize,
+      image: 'https://res.cloudinary.com/iiitma2/image/upload/v1652776942/portfolio/dev/randomize_mhg5ai.png',
     },
 
 
@@ -47,16 +46,16 @@ const Apps = () => {
           <SectionCard key={index} addClass={"mt-20"}>
             <div className="flex-auto">
               <div className="col-auto max-w-lg mx-auto">
-                <h3 className="mb-4 font-semibold text-gray-800 dark:text-slate-100 text-3xl capitalize">
+                <h3 className="mb-4 font-semibold text-slate-100 text-3xl capitalize">
                   <span>{app.name}</span>
                 </h3>
-                <img src={app.image} alt={app.image} className="rounded-md my-6" />
+                <img src={app.image} alt={app.description} className="rounded-md my-6" />
 
-                <p className="text-gray-800 dark:text-white my-4">
+                <p className="text-white my-4">
                 {app.description}
                 </p>
 
-              <p className=" text-sm text-gray-700 dark:text-slate-100 my-2">
+              <p className=" text-sm text-slate-100 my-2">
                 <span className="font-medium text-primary">Technologies: </span>
                 {
                   app.technologies.map((tech, index) => {
@@ -68,7 +67,7 @@ const Apps = () => {
               </p>
 
               <div className="flex-auto mt-5">
-                <a href={app.link} className="text-sm transition ease-in-out  flex space-x-4 items-center p-2 bg-dark text-white hover:bg-dark/75 dark:bg-white dark:text-dark hover:dark:bg-white-alt rounded w-fit"><span>Open Project</span> <MdOutlineOpenInNew/></a>
+                <a href={app.link} className="text-sm transition ease-in-out  flex space-x-4 items-center p-2 bg-white text-dark hover:bg-white-alt rounded w-fit"><span>Open Project</span> <MdOutlineOpenInNew/></a>
               </div>
               </div>
             </div>

@@ -8,7 +8,7 @@ import { SubscribeComponent } from "../components/substack/subscribe";
 import { BsArrowLeft } from "react-icons/bs";
 import { Link } from "gatsby";
 
-const SubscribeSection = ({}) => {
+const SubscribeSection = () => {
   return (
     <div className="px-3">
       <div className="align-center mt-24">
@@ -24,7 +24,6 @@ const SubscribeSection = ({}) => {
 };
 
 export default function Notes({ location, pageContext: { note } }) {
-  console.log(location);
   return (
     <Layout location={location}>
       <Helmet>

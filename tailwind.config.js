@@ -31,7 +31,6 @@ module.exports = {
           DEFAULT: "#FBAE18"
         },
         develop: {
-          // DEFAULT: "#4EAB5F"
           DEFAULT: "#0ea5e9"
         },
         blog: {

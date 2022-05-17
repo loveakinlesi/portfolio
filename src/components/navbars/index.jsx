@@ -78,6 +78,7 @@ export default function Navbar({ location }) {
                         <a
                           href={item.link}
                           target="_blank"
+                          rel="noreferrer"
                           className="py-2 rounded-md text-white"
                         >
                           <item.icon size={20} />

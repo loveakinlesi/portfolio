@@ -115,7 +115,6 @@ const Hero = () => {
   );
 };
 
-//
 
 const Languages = () => {
   const { isMobile } = Mobile();

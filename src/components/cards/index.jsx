@@ -39,18 +39,18 @@ export const BlogCard = ({ title, tag, description, image, link }) => {
   return (
     <li className="relative flex flex-col sm:flex-row lg:flex-col items-start">
       <div className="order-1 sm:ml-6 lg:ml-0  w-full sm:w-1/2 lg:w-full">
-        <h3 className="mb-1 text-gray-900 font-semibold dark:text-gray-200">
+        <h3 className="mb-1  font-semibold text-gray-200">
           <Link
             to={link}
-            className="before:absolute before:inset-0 hover:text-gray-500 dark:hover:text-white"
+            className="before:absolute before:inset-0 hover:text-white"
           >
-            <span className="mb-1 block text-sm leading-6 text-purple-600">
+            <span className="mb-1 block text-sm leading-6 text-white-alt">
               {tag}
             </span>{" "}
             {title}
           </Link>
         </h3>
-        <div className="prose prose-sm text-gray-800 dark:text-gray-400 dark:prose-dark">
+        <div className="prose prose-sm text-gray-400 dark:prose-dark">
           <p>{description}</p>
         </div>
       </div>
