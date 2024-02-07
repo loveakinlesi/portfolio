@@ -4,6 +4,9 @@ module.exports = {
     siteUrl: "https://www.loveakinlesi.com",
     description: "I’m Love — a designer and developer based in Lagos, Nigeria."
   },
+  flags: {
+    DEV_SSR: true
+  },
   plugins: [
     {
       resolve: "gatsby-plugin-google-tagmanager",
