@@ -34,12 +34,7 @@ const Hero = () => {
 
           <div className="prose mt-10 flex mx-auto">
             <p className="text-white-alt font-sans font-medium  text-justify">
-              I am a designer and developer based in the United Kingdom. I
-              started as an engineering product designer with a passion for
-              problem solving. Now, I do a mix of visual design, web development
-              and content creation. When I'm not designing or coding, I love to
-              share whatever I know and brainstorm ideas. I also like to help
-              people on their journey into tech.
+             I’m Love — a UK-based software engineer and hobbyist designer passionate about building innovative, user-focused digital experiences. Starting as an engineering product designer, I fell in love with solving complex problems and now blend visual design, web development, and creative content to craft solutions that make an impact. Beyond coding and designing, I enjoy mentoring, sharing knowledge, and helping others break into tech while constantly exploring new ideas and possibilities.
             </p>
           </div>
         </FadeInSection>
