@@ -261,10 +261,10 @@ const Frameworks = () => {
       name: "Node.js",
       icon: "https://img.icons8.com/color/48/000000/nodejs.png",
     },
-    {
-      name: "Tauri",
-      icon: "https://tauri.app/_astro/logo.DCjQDXhk.svg",
-    },
+    // {
+    //   name: "Tauri",
+    //   icon: "https://tauri.app/_astro/logo.DCjQDXhk.svg",
+    // },
   ];
   return (
     <Container padding={"py-8"}>
