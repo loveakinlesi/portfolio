@@ -28,6 +28,20 @@ const Hero = () => {
 
 const Apps = () => {
   const apps = [
+      {
+      name: "Numeri",
+      description: "A game of higher or lower based on Bible facts.",
+      technologies: ["Nextjs", "TypeScript", "Tailwind", "MongoDB"],
+      link: "https://numeri.proylabs.co/",
+      image: 'https://res.cloudinary.com/iiitma2/image/upload/v1652777282/portfolio/dev/numeri_p2zeiaeom0cwo6olpknv.png',
+    },
+      {
+      name: "Catch the thief",
+      description: "A simple interactive representation of a Math puzzle",
+      technologies: ["React", "TypeScript", "Tailwind"],
+      link: "https://catch-the-thief.vercel.app/",
+      image: 'https://res.cloudinary.com/iiitma2/image/upload/v1652777282/portfolio/dev/ar5juc1c82hhcuvffp0x.png',
+    },
     {
       name: "messagez",
       description: "Messagez is a demo redesign of the Messenger App.",
