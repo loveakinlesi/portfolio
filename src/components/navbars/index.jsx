@@ -40,7 +40,7 @@ export default function Navbar({ location }) {
   ];
 
   return (
-    <div className="sticky top-4 z-40 max-w-[64rem] mx-auto rounded-2xl w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 bg-black/15 hover:shadow-md hover:shadow-black supports-backdrop-blur:bg-black/95">
+    <div className="sticky top-4 z-40 max-w-[64rem] mx-auto rounded-2xl w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 bg-black/15 supports-backdrop-blur:bg-black/95">
       <div className="max-w-5xl mx-auto container px-4">
         <div className="p-4">
           <div className="relative flex items-center">
