@@ -35,6 +35,13 @@ const Apps = () => {
       link: "https://www.npmjs.com/package/js-randomize",
       image: 'https://res.cloudinary.com/iiitma2/image/upload/v1652776942/portfolio/dev/randomize_mhg5ai.png',
     },
+     {
+      name: "React Dynamic Fonts",
+      description: "React Dynamic Fonts is a lightweight and flexible React library that allows you to dynamically change fonts in your React applications.",
+      technologies: ["Typescript", "React", "npm"],
+      link: "https://www.npmjs.com/package/react-dynamic-fonts",
+      image: 'https://res.cloudinary.com/iiitma2/image/upload/v1652776942/portfolio/dev/react-dynamic-fonts_y2vfysr7o0ifbzz3oedz.png',
+    },
 
 
   ];
