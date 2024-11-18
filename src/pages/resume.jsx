@@ -16,14 +16,14 @@ const Hero = () => {
       link: "https://drive.google.com/uc?export=download&id=1pakcHrwM03CSYv25vxD5joJsTdQBGpN9",
       description:
         "Applicably for software engineering roles; especially frontend-related roles.",
-      version: "2022.05",
+      version: "2024.06",
     },
     {
       title: "Design Resume",
       component: MdOutlineDesignServices,
       color: "design",
       link: "https://drive.google.com/uc?export=download&id=122oSw5DzDlWSXfKsXw8UauaXnhIckudg",
-      description: " Applicably for graphics designer, UI/UX roles.",
+      description: "Applicably for graphics designer, UI/UX roles.",
       version: "2022.02",
     },
   ];

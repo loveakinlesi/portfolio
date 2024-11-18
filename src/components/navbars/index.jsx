@@ -15,7 +15,7 @@ import { RiGithubFill, RiInstagramLine, RiLinkedinFill, RiTwitterFill } from "re
 export default function Navbar({ location }) {
   const routes = [
     { label: "Works", to: "/#works", icon: HiOutlineBriefcase },
-    { label: "Blog", to: "/blog", icon: HiMenuAlt1 },
+    // { label: "Blog", to: "/blog", icon: HiMenuAlt1 },
     { label: "Store", to: "/store", icon: HiOutlineShoppingBag },
     { label: "Resume", to: "/resume", icon: HiOutlineBookmark },
   ];
@@ -36,11 +36,11 @@ export default function Navbar({ location }) {
       link: "https://www.linkedin.com/in/loveakinlesi",
       icon: RiLinkedinFill,
     },
-    { label: "Github", link: "https://github.com/iiitma", icon: RiGithubFill },
+    { label: "Github", link: "https://github.com/loveakinlesi", icon: RiGithubFill },
   ];
 
   return (
-    <div className="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 bg-transparent supports-backdrop-blur:bg-black/95">
+    <div className="sticky top-4 z-40 max-w-[64rem] mx-auto rounded-2xl w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 bg-black/15 supports-backdrop-blur:bg-black/95">
       <div className="max-w-5xl mx-auto container px-4">
         <div className="p-4">
           <div className="relative flex items-center">

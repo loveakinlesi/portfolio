@@ -35,8 +35,27 @@ const Apps = () => {
       link: "https://loveakinlesi.com",
       image: 'https://res.cloudinary.com/iiitma2/image/upload/v1652777377/portfolio/dev/Screenshot_2022-05-09_at_21.11.02_cz5a7x.png',
     },
-
-
+    {
+      name: "BUILD Nigeria",
+      description: "Non-Profit creating social change through education for Nigerians",
+      technologies: ["Gatsby", "Typescript", "Tailwind"],
+      link: "https://www.buildng.org/",
+      image: 'https://res.cloudinary.com/iiitma2/image/upload/v1652777377/portfolio/dev/build_gywbdopycvwkunubunok.png',
+    },
+    {
+      name: "Believers in Tech",
+      description: "Christian Non-Profit community of people in tech",
+      technologies: ["Gatsby", "Typescript"],
+      link: "https://www.believersin.tech/",
+      image: 'https://res.cloudinary.com/iiitma2/image/upload/v1652777377/portfolio/dev/bit_orwcrystbvahjov7iwep.png',
+    },
+    {
+      name: "Elo.ng",
+      description: "Nigerian price comparism data company",
+      technologies: ["Nextjs", "Typescript", "Tailwind", "Turborepo"],
+      link: "https://www.elo.ng/",
+      image: 'https://res.cloudinary.com/iiitma2/image/upload/v1652777377/portfolio/dev/elo_sj9tkujkjhdsmob6aiei.png',
+    },
   ];
 
   return (
@@ -49,11 +68,11 @@ const Apps = () => {
               <h3 className="mb-4 font-semibold text-slate-100 text-3xl capitalize">
                 <span>{app.name}</span>
               </h3>
-              <img src={app.image} alt={app.description} className="rounded-md my-6" />
+              <img src={app.image} alt={app?.description || app.name} className="rounded-md my-6" />
 
-              <p className="text-white my-4">
+              {app?.description && <p className="text-white my-4">
               {app.description}
-              </p>
+              </p>}
 
             <p className=" text-sm text-slate-100 my-2">
               <span className="font-medium text-primary">Technologies: </span>
