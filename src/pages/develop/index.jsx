@@ -121,30 +121,34 @@ const Languages = () => {
   const [collapsed, setcollapsed] = useState(true);
   const languages = [
     {
+      name: "TypeScript",
+      icon: "https://img.icons8.com/color/48/000000/typescript.png",
+      level: "93",
+    },
+    {
       name: "JavaScript",
       icon: "https://img.icons8.com/color/48/000000/javascript--v1.png",
       level: "90",
     },
     {
-      name: "TypeScript",
-      icon: "https://img.icons8.com/color/48/000000/typescript.png",
-      level: "89",
-    },
-    {
       name: "HTML",
       icon: "https://img.icons8.com/color/48/000000/html-5--v1.png",
-      level: "85",
+      level: "90",
     },
-
     {
       name: "CSS/Sass",
       icon: "https://img.icons8.com/color/48/000000/sass.png",
-      level: "85",
+      level: "90",
     },
     {
       name: "Python",
       icon: "https://img.icons8.com/color/48/000000/python--v1.png",
-      level: "80",
+      level: "85",
+    },
+      {
+      name: "Java",
+      icon: "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png",
+      level: "83",
     },
     {
       name: "Dart",
@@ -157,14 +161,14 @@ const Languages = () => {
       level: "76",
     },
     {
+      name: "Groovy",
+      icon: "https://img.icons8.com/color/48/jenkins.png",
+      level: "80",
+    },
+    {
       name: "php",
       icon: "https://img.icons8.com/ios-filled/50/ffffff/php-logo.png",
       level: "65",
-    },
-    {
-      name: "Java",
-      icon: "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png",
-      level: "50",
     },
     {
       name: "R",
@@ -174,7 +178,7 @@ const Languages = () => {
     {
       name: "C",
       icon: "https://img.icons8.com/color/48/000000/c-programming.png",
-      level: "45",
+      level: "60",
     },
   ];
 
@@ -226,53 +230,40 @@ const Languages = () => {
 const Frameworks = () => {
   const frameworks = [
     {
-      name: "Bootstrap",
-      icon: "https://img.icons8.com/color/48/000000/bootstrap.png",
+      name: "Nextjs",
+      icons:"https://img.icons8.com/fluency/48/nextjs.png",
+    },
+    {
+      name: "React",
+      icon: "https://img.icons8.com/color/48/000000/react-native.png",
     },
     {
       name: "Angular",
       icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1024px-Angular_full_color_logo.svg.png",
     },
     {
-      name: "Vue.js",
-      icon: "https://img.icons8.com/color/48/000000/vue-js.png",
+      name: "Tailwind CSS",
+      icon: "https://img.icons8.com/color/48/tailwind_css.png",
     },
     {
-      name: "React",
+      name: "React Native",
       icon: "https://img.icons8.com/color/48/000000/react-native.png",
-    },
-
-    {
-      name: "Gatsby",
-      icon: "https://img.icons8.com/color/48/000000/gatsbyjs.png",
-    },
-    {
-      name: "Strapi",
-      icon: "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F3e476609-36f2-4c5e-bcf7-783c5fbdea96%2Fstrapilogo.png?table=block&id=2e389f6d-8262-4cf2-9fee-9c5223defab9&spaceId=5d044f48-c072-4cec-a376-a9ab588fe6d6&width=250&userId=&cache=v2",
     },
     {
       name: "Flutter",
       icon: "https://img.icons8.com/color/48/000000/flutter.png",
     },
     {
-      name: "Firebase",
-      icon: "https://img.icons8.com/color/48/000000/firebase.png",
-    },
-    {
-      name: "Git",
-      icon: "https://img.icons8.com/color/48/000000/git.png",
-    },
-    {
-      name: "Flask",
-      icon: "https://www.kindpng.com/picc/m/188-1882559_python-flask-hd-png-download.png",
-    },
-    {
-      name: "GraphQL",
-      icon: "https://img.icons8.com/color/50/000000/graphql.png",
+      name: "TurboRepo",
+      icon: "https://turbo.build/images/docs/repo/repo-hero-logo-dark.svg",
     },
     {
       name: "Node.js",
       icon: "https://img.icons8.com/color/48/000000/nodejs.png",
+    },
+    {
+      name: "Tauri",
+      icon: "https://tauri.app/_astro/logo.DCjQDXhk.svg",
     },
   ];
   return (
@@ -314,17 +305,12 @@ const Tools = () => {
       icon: "https://img.icons8.com/color/48/000000/visual-studio-code-2019.png",
     },
     {
-      name: "PyCharm",
-      icon: "https://img.icons8.com/color/48/000000/pycharm.png",
+      name: "Jenkins",
+      icon: "https://img.icons8.com/color/48/jenkins.png",
     },
     {
       name: "Postnan",
       icon: "https://res.cloudinary.com/postman/image/upload/t_team_logo/v1629869194/team/2893aede23f01bfcbd2319326bc96a6ed0524eba759745ed6d73405a3a8b67a8",
-    },
-
-    {
-      name: "Github",
-      icon: "https://img.icons8.com/fluency-systems-filled/50/ffffff/github.png",
     },
     {
       name: "Google Cloud Platform",
@@ -337,10 +323,6 @@ const Tools = () => {
     {
       name: "Amazon Web Service",
       icon: "https://img.icons8.com/color/48/000000/amazon-web-services.png",
-    },
-    {
-      name: "Heroku",
-      icon: "https://img.icons8.com/color/48/000000/heroku.png",
     },
     {
       name: "NPM",
