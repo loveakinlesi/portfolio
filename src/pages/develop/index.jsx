@@ -231,7 +231,7 @@ const Frameworks = () => {
   const frameworks = [
     {
       name: "Nextjs",
-      icons:"https://img.icons8.com/fluency/48/nextjs.png",
+      icon: "https://img.icons8.com/fluency/48/nextjs.png",
     },
     {
       name: "React",
