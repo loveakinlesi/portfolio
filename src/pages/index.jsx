@@ -34,7 +34,7 @@ const Hero = () => {
 
           <div className="prose mt-10 flex mx-auto">
             <p className="text-white-alt font-sans font-medium  text-justify">
-              I’m Love — a designer and developer based in Lagos, Nigeria. I
+              I am a designer and developer based in the United Kingdom. I
               started as an engineering product designer with a passion for
               problem solving. Now, I do a mix of visual design, web development
               and content creation. When I'm not designing or coding, I love to
