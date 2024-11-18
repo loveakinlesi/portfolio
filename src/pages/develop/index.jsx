@@ -34,7 +34,7 @@ const Hero = () => {
     },
     {
       title: "Packages",
-      text: "npm install -s what ?",
+      text: "pnpm add what ?",
       imageSize: "250px",
       bgColor:
         "bg-[url('https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80')] bg-cover",
